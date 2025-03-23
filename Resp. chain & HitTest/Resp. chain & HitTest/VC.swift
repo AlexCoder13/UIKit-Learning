@@ -90,10 +90,10 @@ final class ViewController: UIViewController {
             orangeView.topAnchor.constraint(equalTo: blueView.topAnchor, constant: 40),
             orangeView.leadingAnchor.constraint(equalTo: blueView.leadingAnchor, constant: 20),
             orangeView.trailingAnchor.constraint(equalTo: blueView.trailingAnchor, constant: -20),
-            orangeView.heightAnchor.constraint(equalToConstant: 100),
+//            orangeView.heightAnchor.constraint(equalToConstant: 100),
             
             // 2 задача.
-//            orangeView.heightAnchor.constraint(equalToConstant: 350)
+            orangeView.heightAnchor.constraint(equalToConstant: 350)
             ])
     }
 }

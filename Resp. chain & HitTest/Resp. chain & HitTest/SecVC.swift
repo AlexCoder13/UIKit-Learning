@@ -11,10 +11,11 @@ final class SecondViewController: UIViewController {
     
     // MARK: Properties
     private lazy var myButton: UIButton = {
-        let myButton = UIButton()
+//        let myButton = UIButton()
+        let myButton = CustomButton()
         myButton.setImage(UIImage(systemName: "xmark"), for: .normal)
         myButton.tintColor = .white
-//        myButton.backgroundColor = .blue
+        myButton.backgroundColor = .blue
         myButton.addTarget(self, action: #selector(tapButton), for: .touchUpInside)
         
         myButton.translatesAutoresizingMaskIntoConstraints = false
@@ -124,4 +125,11 @@ final class SecondViewController: UIViewController {
         self.dismiss(animated: true)
     }
     
+}
+
+
+final class CustomButton: UIButton {
+    override func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
+        return bounds.insetBy(dx: -30, dy: -30).contains(point)
+    }
 }
